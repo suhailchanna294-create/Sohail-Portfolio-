@@ -1,0 +1,835 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the web development journey, skills, learning roadmap and goals of Sohail Channa.">
+    <meta name="theme-color" content="#080b14">
+    <title>My Journey | Sohail Channa</title>
+    <link rel="icon" type="image/svg+xml"
+href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3C/svg%3E">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- PRELOADER -->
+     
+    <div class="preloader" id="preloader">
+    
+        <!-- <a href="index.html" class="brand">
+                <span class="brand-icon">S</span>
+                <span>SOHAIL<span class="brand-accent">CHANNA.</span></span>
+            </a> -->
+        
+    </div>
+
+    <!-- BACKGROUND -->
+    <canvas id="codeCanvas"></canvas>
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+    <div class="grid-overlay"></div>
+
+    <!-- HEADER -->
+    <header class="header" id="header">
+        <div class="container nav-layout">
+
+            <a href="index.html" class="brand">
+                 <span style="margin: 10px;" class="brand-icon">S</span>
+                
+                 <span>SOHAIL<span class="brand-accent">CHANNA.</span></span>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="navigation" id="mainNav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="skills.html" class="nav-link">Skills</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="journey.html" class="nav-link active">Journey</a>
+                <a href="contact.html" class="nav-link">contact</a>
+                
+            </nav>
+
+        </div>
+    </header>
+
+    <main>
+
+        <!-- HERO -->
+        <section class="hero section">
+            <div class="container hero-layout">
+
+                <div class="hero-content reveal">
+
+                    <div class="availability">
+                        <span class="availability-dot"></span>
+                        MY DEVELOPMENT STORY
+                    </div>
+
+                    <p class="hero-overline">EVERY DEVELOPER HAS A STORY</p>
+
+                    <h1>
+                        My Journey
+                        <span class="gradient-text">Into Development.</span>
+                    </h1>
+
+                    <div class="hero-role">
+                        <span class="role-prefix">&gt;</span>
+                        Learning. Building. Improving.
+                        <span class="typing-cursor">|</span>
+                    </div>
+
+                    <p class="hero-description">
+                        Welcome to my development journey. I am Sohail Channa,
+                        focused on learning web development and building
+                        modern digital experiences. My interest in technology
+                        drives me to explore new ideas, understand how websites
+                        work, and turn creative concepts into practical
+                        solutions. Every project gives me another opportunity
+                        to learn, experiment, solve problems, and improve my
+                        development skills.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="#timeline" class="button button-primary">
+                            Explore My Journey <span>↓</span>
+                        </a>
+
+                        <a href="contact.html" class="button button-outline">
+                            Contact Me
+                        </a>
+                    </div>
+
+                    <div class="hero-meta">
+                        <span>01. Learn</span>
+                        <span>02. Practice</span>
+                        <span>03. Create</span>
+                    </div>
+
+                </div>
+
+                <!-- FILLED CODE EDITOR CARD -->
+                <div class="hero-visual reveal">
+
+                    <div class="editor-window" style="width:100%; max-width:650px; overflow:hidden;">
+
+                        <div class="editor-topbar">
+                            <div class="editor-dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+
+                            <span class="editor-filename">sohail-journey.js</span>
+                            <span class="editor-status">● ONLINE</span>
+                        </div>
+
+                        <div class="editor-body" style="display:flex; min-height:440px;">
+
+                            <div class="editor-sidebar" style="min-width:55px; padding:18px 10px;">
+                                <span>EX</span>
+                                <span>JS</span>
+                                <span>HT</span>
+                                <span>CS</span>
+                            </div>
+
+                            <div class="code-content" style="flex:1; min-width:0; padding:20px 12px; overflow:hidden;">
+
+                                <div class="code-line" style="justify-content:flex-start; gap:10px;">
+                                    <span class="line-number">01</span>
+                                    <span class="code-purple">const</span>
+                                    <span>developer = {</span>
+                                </div>
+
+                                <div class="code-line" style="justify-content:flex-start; gap:10px;">
+                                    <span class="line-number">02</span>
+                                    <span>&nbsp;&nbsp;name:</span>
+                                    <span class="code-green">"Sohail Channa",</span>
+                                </div>
+
+                                <div class="code-line" style="justify-content:flex-start; gap:10px;">
+                                    <span class="line-number">03</span>
+                                    <span>&nbsp;&nbsp;role:</span>
+                                    <span class="code-green">"Web Developer",</span>
+                                </div>
+
+                                <div class="code-line" style="justify-content:flex-start; gap:10px;">
+                                    <span class="line-number">04</span>
+                                    <span>&nbsp;&nbsp;focus:</span>
+                                    <span class="code-green">"Web Development",</span>
+                                </div>
+
+                                <div class="code-line" style="justify-content:flex-start; gap:10px;">
+                                    <span class="line-number">05</span>
+                                    <span>&nbsp;&nbsp;skills: [</span>
+                                </div>
+
+                                <div class="code-line" style="justify-content:flex-start; gap:10px;">
+                                    <span class="line-number">06</span>
+                                    <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                    <span class="code-orange">"HTML"</span>,
+                                </div>
+
+                                <div class="code-line" style="justify-content:flex-start; gap:10px;">
+                                    <span class="line-number">07</span>
+                                    <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                    <span class="code-orange">"CSS"</span>,
+                                </div>
+
+                                <div class="code-line" style="justify-content:flex-start; gap:10px;">
+                                    <span class="line-number">08</span>
+                                    <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                    <span class="code-orange">"JavaScript"</span>,
+                                </div>
+
+                                <div class="code-line" style="justify-content:flex-start; gap:10px;">
+                                    <span class="line-number">09</span>
+                                    <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                    <span class="code-orange">"Node.js"</span>
+                                </div>
+
+                                <div class="code-line" style="justify-content:flex-start; gap:10px;">
+                                    <span class="line-number">10</span>
+                                    <span>&nbsp;&nbsp;],</span>
+                                </div>
+
+                                <div class="code-line" style="justify-content:flex-start; gap:10px;">
+                                    <span class="line-number">11</span>
+                                    <span>&nbsp;&nbsp;mindset:</span>
+                                    <span class="code-green">"Never Stop Learning",</span>
+                                </div>
+
+                                <div class="code-line" style="justify-content:flex-start; gap:10px;">
+                                    <span class="line-number">12</span>
+                                    <span>&nbsp;&nbsp;goal:</span>
+                                    <span class="code-green">"Full Stack Developer"</span>
+                                </div>
+
+                                <div class="code-line" style="justify-content:flex-start; gap:10px;">
+                                    <span class="line-number">13</span>
+                                    <span>};</span>
+                                </div>
+
+                                <div class="code-line" style="justify-content:flex-start; gap:10px; margin-top:15px;">
+                                    <span class="line-number">14</span>
+                                    <span class="code-comment">// My journey continues...</span>
+                                </div>
+
+                                <div class="code-line" style="justify-content:flex-start; gap:10px;">
+                                    <span class="line-number">15</span>
+                                    <span class="code-purple">console</span>.log(
+                                    <span class="code-green">"Keep Building!"</span>);
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="editor-footer">
+                            <span>JavaScript</span>
+                            <span>UTF-8</span>
+                            <span>15 Lines</span>
+                            <span>● Ready</span>
+                        </div>
+
+                    </div>
+
+                    <div class="floating-chip chip-top">
+                        <span>✦</span> Creative Developer
+                    </div>
+
+                    <div class="floating-chip chip-bottom">
+                        <span>⌘</span> Always Learning
+                    </div>
+
+                    <div class="editor-glow"></div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- INTRODUCTION -->
+        <section class="section">
+            <div class="container">
+
+                <div class="section-heading reveal">
+                    <span class="section-kicker">THE STORY BEHIND THE CODE</span>
+
+                    <h2>
+                        More Than Just
+                        <span class="gradient-text">Writing Code.</span>
+                    </h2>
+
+                    <p>
+                        Becoming a developer is not only about learning
+                        programming languages. It is about developing a
+                        problem-solving mindset, understanding people,
+                        exploring technology, and creating digital
+                        experiences that serve a real purpose.
+                    </p>
+                </div>
+
+                <div class="approach-grid">
+
+                    <article class="approach-card reveal">
+                        <span class="approach-number">01</span>
+                        <div class="approach-icon">⌘</div>
+                        <h3>Curiosity</h3>
+                        <p>
+                            My interest in development comes from wanting
+                            to understand how websites and applications
+                            work. I enjoy exploring interfaces, discovering
+                            new technologies, and learning how different
+                            parts of a website connect together.
+                        </p>
+                    </article>
+
+                    <article class="approach-card reveal">
+                        <span class="approach-number">02</span>
+                        <div class="approach-icon">⌨</div>
+                        <h3>Consistent Practice</h3>
+                        <p>
+                            Practical work is an important part of learning.
+                            Writing code, experimenting with layouts,
+                            testing functionality, and understanding errors
+                            help strengthen my technical foundation.
+                        </p>
+                    </article>
+
+                    <article class="approach-card reveal">
+                        <span class="approach-number">03</span>
+                        <div class="approach-icon">✦</div>
+                        <h3>Continuous Growth</h3>
+                        <p>
+                            Technology is always changing. I want to keep
+                            improving my skills, explore better development
+                            techniques, and create projects that demonstrate
+                            thoughtful design and useful functionality.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- TIMELINE -->
+        <section class="section" id="timeline">
+            <div class="container">
+
+                <div class="section-heading reveal">
+                    <span class="section-kicker">MY LEARNING ROADMAP</span>
+
+                    <h2>
+                        The Path of
+                        <span class="gradient-text">Growth.</span>
+                    </h2>
+
+                    <p>
+                        A look at the main areas of my web development
+                        learning journey, from understanding website
+                        structure to exploring complete application
+                        development.
+                    </p>
+                </div>
+
+                <div class="approach-grid">
+
+                    <article class="approach-card reveal">
+                        <span class="approach-number">STAGE 01</span>
+                        <div class="approach-icon">🌐</div>
+
+                        <h3>Web Foundations</h3>
+
+                        <p>
+                            Every website starts with structure. I focus
+                            on understanding how HTML organizes content,
+                            how browsers interpret web pages, and how
+                            semantic elements create meaningful layouts.
+                            These foundations help me build pages that
+                            are organized, readable, and easier to maintain.
+                        </p>
+
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>Structure</span>
+                            <span>Semantics</span>
+                        </div>
+                    </article>
+
+                    <article class="approach-card reveal">
+                        <span class="approach-number">STAGE 02</span>
+                        <div class="approach-icon">🎨</div>
+
+                        <h3>Frontend Design</h3>
+
+                        <p>
+                            A good interface should be clear, attractive,
+                            and easy to use. I explore CSS styling,
+                            responsive layouts, typography, colors,
+                            spacing, transitions, and animations to
+                            understand how a strong visual experience
+                            comes together.
+                        </p>
+
+                        <div class="project-tags">
+                            <span>CSS</span>
+                            <span>Responsive Design</span>
+                            <span>Animations</span>
+                        </div>
+                    </article>
+
+                    <article class="approach-card reveal">
+                        <span class="approach-number">STAGE 03</span>
+                        <div class="approach-icon">⚡</div>
+
+                        <h3>Interactive Development</h3>
+
+                        <p>
+                            JavaScript brings interfaces to life. I focus
+                            on understanding programming logic, events,
+                            DOM manipulation, functions, and interactive
+                            elements. These concepts help turn static
+                            pages into useful experiences.
+                        </p>
+
+                        <div class="project-tags">
+                            <span>JavaScript</span>
+                            <span>DOM</span>
+                            <span>Interactions</span>
+                        </div>
+                    </article>
+
+                    <article class="approach-card reveal">
+                        <span class="approach-number">STAGE 04</span>
+                        <div class="approach-icon">⚙</div>
+
+                        <h3>Backend Development</h3>
+
+                        <p>
+                            Backend development introduces the server-side
+                            logic behind applications. My development
+                            direction includes Node.js, server setup,
+                            request handling, APIs, and understanding
+                            how frontend and backend systems communicate.
+                        </p>
+
+                        <div class="project-tags">
+                            <span>Node.js</span>
+                            <span>Server</span>
+                            <span>APIs</span>
+                        </div>
+                    </article>
+
+                    <article class="approach-card reveal">
+                        <span class="approach-number">STAGE 05</span>
+                        <div class="approach-icon">🚀</div>
+
+                        <h3>Complete Projects</h3>
+
+                        <p>
+                            Bringing different technologies together is
+                            an important development goal. I aim to create
+                            complete websites with multiple pages,
+                            functional navigation, interactive components,
+                            responsive layouts, and organized code.
+                        </p>
+
+                        <div class="project-tags">
+                            <span>Frontend</span>
+                            <span>Backend</span>
+                            <span>Integration</span>
+                        </div>
+                    </article>
+
+                    <article class="approach-card reveal">
+                        <span class="approach-number">STAGE 06</span>
+                        <div class="approach-icon">✧</div>
+
+                        <h3>Future Growth</h3>
+
+                        <p>
+                            My long-term direction is to strengthen my
+                            full-stack development knowledge, improve
+                            problem-solving, understand professional
+                            development practices, and build useful
+                            digital products that provide real value.
+                        </p>
+
+                        <div class="project-tags">
+                            <span>Full Stack</span>
+                            <span>Problem Solving</span>
+                            <span>Growth</span>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- TECHNOLOGIES -->
+        <section class="section technology-section">
+            <div class="container">
+
+                <div class="section-heading reveal">
+                    <span class="section-kicker">MY TECHNICAL TOOLKIT</span>
+
+                    <h2>
+                        Technologies I
+                        <span class="gradient-text">Work With.</span>
+                    </h2>
+
+                    <p>
+                        The technologies below represent my core
+                        development interests and technical direction.
+                        Each one contributes to a different part of
+                        building modern websites and applications.
+                    </p>
+                </div>
+
+                <div class="technology-grid">
+
+                    <article class="technology-card reveal">
+                        <div class="technology-icon">🌐</div>
+                        <span class="technology-type">STRUCTURE</span>
+                        <h3>HTML</h3>
+                        <p>
+                            Organizing website content with structured
+                            markup, semantic elements, accessible
+                            page sections, and meaningful document layouts.
+                        </p>
+                        <div class="technology-bottom">
+                            <span>Frontend</span>
+                            <span>01</span>
+                        </div>
+                    </article>
+
+                    <article class="technology-card reveal">
+                        <div class="technology-icon">🎨</div>
+                        <span class="technology-type">PRESENTATION</span>
+                        <h3>CSS</h3>
+                        <p>
+                            Designing visual experiences through
+                            responsive layouts, typography, colors,
+                            transitions, animations, and modern styling.
+                        </p>
+                        <div class="technology-bottom">
+                            <span>Frontend</span>
+                            <span>02</span>
+                        </div>
+                    </article>
+
+                    <article class="technology-card reveal">
+                        <div class="technology-icon">⚡</div>
+                        <span class="technology-type">INTERACTIVITY</span>
+                        <h3>JavaScript</h3>
+                        <p>
+                            Adding dynamic functionality through
+                            programming logic, events, DOM manipulation,
+                            and interactive user experiences.
+                        </p>
+                        <div class="technology-bottom">
+                            <span>Programming</span>
+                            <span>03</span>
+                        </div>
+                    </article>
+
+                    <article class="technology-card reveal">
+                        <div class="technology-icon">⬢</div>
+                        <span class="technology-type">SERVER SIDE</span>
+                        <h3>Node.js</h3>
+                        <p>
+                            Exploring server-side JavaScript, application
+                            logic, request handling, and the foundations
+                            of backend development.
+                        </p>
+                        <div class="technology-bottom">
+                            <span>Backend</span>
+                            <span>04</span>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- DEVELOPMENT APPROACH -->
+        <section class="section">
+            <div class="container">
+
+                <div class="section-heading reveal">
+                    <span class="section-kicker">MY WORKING APPROACH</span>
+
+                    <h2>
+                        Turning Ideas Into
+                        <span class="gradient-text">Experiences.</span>
+                    </h2>
+
+                    <p>
+                        I believe that good development requires more than
+                        code. It needs planning, attention to detail,
+                        testing, and a clear understanding of what the
+                        final product should achieve.
+                    </p>
+                </div>
+
+                <div class="approach-grid">
+
+                    <article class="approach-card reveal">
+                        <span class="approach-number">01</span>
+                        <div class="approach-icon">⌕</div>
+                        <h3>Understand</h3>
+                        <p>
+                            Start by understanding the purpose of the
+                            project, the needs of its users, and the
+                            features required to make the experience
+                            useful and straightforward.
+                        </p>
+                    </article>
+
+                    <article class="approach-card reveal">
+                        <span class="approach-number">02</span>
+                        <div class="approach-icon">⌘</div>
+                        <h3>Design and Build</h3>
+                        <p>
+                            Organize the page structure, plan the
+                            interface, write maintainable code, and
+                            connect the required functionality in a
+                            clear development workflow.
+                        </p>
+                    </article>
+
+                    <article class="approach-card reveal">
+                        <span class="approach-number">03</span>
+                        <div class="approach-icon">✓</div>
+                        <h3>Test and Improve</h3>
+                        <p>
+                            Review the result, test navigation and
+                            interactions, check responsive behavior,
+                            identify problems, and make improvements
+                            where needed.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- MARQUEE -->
+        <section class="marquee-section">
+            <div class="marquee-track">
+                <div class="marquee-content">
+                    <span>LEARN</span>
+                    <span>✦</span>
+                    <span>BUILD</span>
+                    <span>✦</span>
+                    <span>IMPROVE</span>
+                    <span>✦</span>
+                    <span>CREATE</span>
+                    <span>✦</span>
+                    <span>INNOVATE</span>
+                    <span>✦</span>
+                    <span>LEARN</span>
+                    <span>✦</span>
+                    <span>BUILD</span>
+                    <span>✦</span>
+                    <span>IMPROVE</span>
+                    <span>✦</span>
+                    <span>CREATE</span>
+                    <span>✦</span>
+                    <span>INNOVATE</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- FUTURE GOALS -->
+        <section class="section">
+            <div class="container">
+
+                <div class="section-heading reveal">
+                    <span class="section-kicker">LOOKING AHEAD</span>
+
+                    <h2>
+                        What Comes
+                        <span class="gradient-text">Next?</span>
+                    </h2>
+
+                    <p>
+                        My journey is ongoing. These are some of the
+                        directions I want to continue exploring as
+                        I develop my technical knowledge.
+                    </p>
+                </div>
+
+                <div class="approach-grid">
+
+                    <article class="approach-card reveal">
+                        <span class="approach-number">GOAL 01</span>
+                        <div class="approach-icon">💻</div>
+                        <h3>Advanced Frontend</h3>
+                        <p>
+                            Continue improving responsive interface
+                            development, animations, accessibility,
+                            reusable components, and overall user
+                            experience.
+                        </p>
+                    </article>
+
+                    <article class="approach-card reveal">
+                        <span class="approach-number">GOAL 02</span>
+                        <div class="approach-icon">⚙</div>
+                        <h3>Full Stack Knowledge</h3>
+                        <p>
+                            Develop stronger understanding of Node.js,
+                            backend architecture, APIs, server-side
+                            functionality, and the connection between
+                            frontend and backend.
+                        </p>
+                    </article>
+
+                    <article class="approach-card reveal">
+                        <span class="approach-number">GOAL 03</span>
+                        <div class="approach-icon">🚀</div>
+                        <h3>Meaningful Products</h3>
+                        <p>
+                            Build practical digital products that solve
+                            problems, provide useful features, and
+                            deliver a smooth experience across devices.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="section">
+            <div class="container">
+
+                <div class="cta-card reveal">
+
+                    <div class="cta-orb"></div>
+
+                    <span class="section-kicker">THE JOURNEY CONTINUES</span>
+
+                    <h2>
+                        The Best Is
+                        <span class="gradient-text">Still Ahead.</span>
+                    </h2>
+
+                    <p>
+                        Every project is an opportunity to learn.
+                        Every challenge is an opportunity to improve.
+                        My goal is to keep developing my skills, explore
+                        modern technologies, and turn creative ideas
+                        into meaningful digital experiences. The journey
+                        does not end here — there is always something
+                        new to discover and build.
+                    </p>
+
+                    <div class="cta-actions">
+                        <a href="projects.html" class="button button-primary">
+                            Explore Projects <span>↗</span>
+                        </a>
+
+                        <a href="contact.html" class="button button-outline">
+                            Let's Connect
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+
+            <div class="footer-main">
+
+                <div class="footer-about">
+
+                    <a href="index.html" class="brand">
+                        <span class="brand-icon">S</span>
+                        SOHAIL<span class="brand-accent">CHANNA.</span>
+                    </a>
+
+                    <p>
+                        Focused on web development, creative problem-solving,
+                        and building modern digital experiences through
+                        continuous learning and practical development.
+                    </p>
+
+                    <div class="footer-socials">
+                        <a href="mailto:suhailchanna294@gmail.com" aria-label="Email">✉</a>
+                        <a href="https://wa.me/923172319116" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">◉</a>
+                    </div>
+
+                </div>
+
+                <div class="footer-column">
+                    <h3>Explore</h3>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="skills.html">Skills</a>
+                    <a href="services.html">Services</a>
+
+                </div>
+
+                <div class="footer-column">
+                    <h3>Discover</h3>
+                    <a href="projects.html">Projects</a>
+                    <a href="journey.html">Journey</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+
+                <div class="footer-column footer-contact">
+                    <h3>Get In Touch</h3>
+
+                    <span class="footer-label">EMAIL</span>
+                    <a href="mailto:suhailchanna294@gmail.com">
+                        suhailchanna294@gmail.com
+                    </a>
+
+                    <span class="footer-label">PHONE</span>
+                    <a href="tel:03172319116">03172319116</a>
+
+                    <span class="footer-label">WHATSAPP</span>
+                    <a href="https://wa.me/923172319116" target="_blank" rel="noopener noreferrer">
+                        Chat on WhatsApp
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 Sohail Channa. All rights reserved.</p>
+                <p>Designed with <span class="brand-accent">passion</span> & code.</p>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- FLOATING WHATSAPP -->
+    <a href="https://wa.me/923172319116"
+       class="whatsapp-button"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Chat on WhatsApp">
+        <span>◉</span>
+    </a>
+
+    <!-- SHARED JAVASCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+</html>

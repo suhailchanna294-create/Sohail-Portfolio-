@@ -1,0 +1,871 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#050509">
+    <meta name="description" content="Contact Sohail Channa for web development and creative digital projects.">
+
+    <title>Contact | Sohail Channa</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+     <link rel="icon" type="image/svg+xml"
+href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3C/svg%3E">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* CONTACT PAGE */
+
+        .contact-hero {
+            padding: 145px 0 65px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-heading {
+            max-width: 850px;
+            margin: 0 auto 65px;
+            text-align: center;
+        }
+
+        .contact-heading h1 {
+            font-size: clamp(40px, 6vw, 72px);
+            line-height: 1.1;
+            margin: 18px 0;
+        }
+
+        .contact-heading p {
+            color: #a5a5b8;
+            line-height: 1.9;
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        .contact-layout {
+            display: grid;
+            grid-template-columns: minmax(280px, .8fr) minmax(0, 1.35fr);
+            gap: 28px;
+            align-items: stretch;
+            width: 100%;
+        }
+
+        .contact-info {
+            padding: 35px;
+            border: 1px solid rgba(145,113,255,.22);
+            border-radius: 22px;
+            background: linear-gradient(145deg,#171625,#0b0b14);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-symbol {
+            width: 65px;
+            height: 65px;
+            display: grid;
+            place-items: center;
+            border-radius: 18px;
+            background: rgba(137,99,255,.15);
+            color: #a88aff;
+            font-size: 30px;
+            margin-bottom: 28px;
+        }
+
+        .contact-info h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .contact-info > p {
+            color: #a2a2b5;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .contact-info-item {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            padding: 19px 0;
+            border-bottom: 1px solid rgba(255,255,255,.08);
+        }
+
+        .contact-info-icon {
+            width: 43px;
+            height: 43px;
+            display: grid;
+            place-items: center;
+            flex-shrink: 0;
+            border-radius: 12px;
+            background: rgba(137,99,255,.12);
+            color: #ad92ff;
+            font-size: 19px;
+        }
+
+        .contact-info-item small {
+            display: block;
+            color: #88889d;
+            margin-bottom: 6px;
+            font-size: 12px;
+        }
+
+        .contact-info-item a,
+        .contact-info-item strong {
+            color: #eeeaff;
+            font-size: 14px;
+            text-decoration: none;
+            overflow-wrap: anywhere;
+        }
+
+        .contact-info-item a:hover {
+            color: #a88aff;
+        }
+
+        .contact-socials {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: auto;
+            padding-top: 30px;
+        }
+
+        .contact-socials a {
+            padding: 12px 17px;
+            color: #e9e5ff;
+            text-decoration: none;
+            border: 1px solid rgba(255,255,255,.12);
+            border-radius: 10px;
+            font-size: 13px;
+            transition: .3s;
+        }
+
+        .contact-socials a:hover {
+            background: #8055ff;
+            border-color: #8055ff;
+            transform: translateY(-3px);
+        }
+
+        /* FORM */
+
+        .contact-form-panel {
+            min-width: 0;
+            padding: 38px;
+            border-radius: 22px;
+            border: 1px solid rgba(145,113,255,.23);
+            background: rgba(17,16,28,.96);
+            box-shadow: 0 20px 70px rgba(0,0,0,.2);
+        }
+
+        .contact-form-heading {
+            margin-bottom: 30px;
+        }
+
+        .contact-form-heading span {
+            color: #a98aff;
+            font-size: 12px;
+            letter-spacing: 3px;
+            font-family: "DM Mono", monospace;
+        }
+
+        .contact-form-heading h2 {
+            font-size: 30px;
+            margin: 10px 0;
+        }
+
+        .contact-form-heading p {
+            color: #9292a7;
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+        .contact-fields {
+            display: grid;
+            grid-template-columns: repeat(2,minmax(0,1fr));
+            gap: 22px 18px;
+        }
+
+        .contact-field {
+            min-width: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .contact-field.full {
+            grid-column: 1 / -1;
+        }
+
+        .contact-field label {
+            color: #e7e3f6;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .contact-field input,
+        .contact-field select,
+        .contact-field textarea {
+            width: 100%;
+            min-width: 0;
+            box-sizing: border-box;
+            padding: 15px 16px;
+            border: 1px solid #302e40;
+            border-radius: 11px;
+            background: #0b0b14;
+            color: #fff;
+            font-family: Inter, sans-serif;
+            font-size: 14px;
+            outline: none;
+            transition: .3s;
+        }
+
+        .contact-field input:focus,
+        .contact-field select:focus,
+        .contact-field textarea:focus {
+            border-color: #9471ff;
+            box-shadow: 0 0 0 3px rgba(148,113,255,.12);
+        }
+
+        .contact-field input::placeholder,
+        .contact-field textarea::placeholder {
+            color: #77778a;
+        }
+
+        .contact-field select option {
+            background: #11111c;
+        }
+
+        .contact-field textarea {
+            min-height: 155px;
+            resize: vertical;
+        }
+
+        .contact-submit {
+            grid-column: 1 / -1;
+            width: 100%;
+            padding: 17px 22px;
+            border: 0;
+            border-radius: 11px;
+            color: #fff;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            background: linear-gradient(100deg,#7952ed,#a34cf5,#05bde8);
+            transition: .3s;
+        }
+
+        .contact-submit:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(125,76,239,.3);
+        }
+
+        .contact-form-note {
+            margin-top: 15px;
+            color: #85859a;
+            font-size: 12px;
+            line-height: 1.7;
+            text-align: center;
+        }
+
+        .contact-bottom {
+            text-align: center;
+            padding: 75px 0 20px;
+        }
+
+        .contact-bottom h2 {
+            font-size: 30px;
+            margin-bottom: 12px;
+        }
+
+        .contact-bottom p {
+            color: #9999ac;
+            line-height: 1.8;
+        }
+
+        @media(max-width: 900px) {
+            .contact-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-info {
+                min-height: auto;
+            }
+        }
+
+        @media(max-width: 600px) {
+            .contact-hero {
+                padding-top: 110px;
+            }
+
+            .contact-info,
+            .contact-form-panel {
+                padding: 23px;
+            }
+
+            .contact-fields {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-field.full,
+            .contact-submit {
+                grid-column: auto;
+            }
+
+            .contact-heading {
+                margin-bottom: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- PRELOADER -->
+
+    <div class="preloader" id="preloader">
+        <div class="loader-brand">Sohail Channa<span>.</span></div>
+        <div class="loader-track"><span></span></div>
+        <p>INITIALIZING DIGITAL EXPERIENCE</p>
+    </div>
+
+    <!-- BACKGROUND -->
+
+    <canvas id="codeCanvas"></canvas>
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+    <div class="grid-overlay"></div>
+
+    <!-- HEADER -->
+
+    <header class="header" id="header">
+
+        <div class="container nav-layout">
+
+            <a href="index.html" class="brand">
+                <span style="margin: 10px;" class="brand-icon">S</span>
+                <span>SOHAIL<span class="brand-accent">CHANA.</span></span>
+            </a>
+
+            <button class="menu-toggle"
+                    id="menuToggle"
+                    aria-label="Toggle navigation"
+                    aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="navigation" id="mainNav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="skills.html" class="nav-link">Skills</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="journey.html" class="nav-link">Journey</a>
+                <a href="contact.html" class="nav-link active">Contact</a>
+            </nav>
+
+            <a href="#contact-form" class="nav-button">
+                Let's Connect <span>↗</span>
+            </a>
+
+        </div>
+    </header>
+
+    <main>
+
+        <!-- CONTACT HERO -->
+
+        <section class="contact-hero">
+
+            <div class="container">
+
+                <div class="contact-heading reveal">
+
+                    <span class="section-kicker">
+                        01 / LET'S CONNECT
+                    </span>
+
+                    <h1>
+                        Let's Build Something
+                        <span class="gradient-text">Amazing.</span>
+                    </h1>
+
+                    <p>
+                        Every great digital experience starts with an idea.
+                        Whether you have a website project, a creative concept
+                        or a question about development, I'd love to hear from you.
+                    </p>
+
+                </div>
+
+                <!-- CONTACT LAYOUT -->
+
+                <div class="contact-layout">
+
+                    <!-- LEFT INFORMATION -->
+
+                    <aside class="contact-info reveal">
+
+                        <div class="contact-symbol">✦</div>
+
+                        <span class="section-kicker">
+                            CONTACT INFORMATION
+                        </span>
+
+                        <h2>Let's Talk.</h2>
+
+                        <p>
+                            Choose your preferred way to connect. Share your
+                            thoughts, discuss a project or simply start a
+                            conversation about technology and development.
+                        </p>
+
+                        <div class="contact-info-item">
+
+                            <div class="contact-info-icon">✉</div>
+
+                            <div>
+                                <small>EMAIL ADDRESS</small>
+                                <a href="mailto:suhailchanna294@gmail.com">
+                                    suhailchanna294@gmail.com
+                                </a>
+                            </div>
+
+                        </div>
+
+                        <div class="contact-info-item">
+
+                            <div class="contact-info-icon">☎</div>
+
+                            <div>
+                                <small>PHONE NUMBER</small>
+                                <a href="tel:+923172319116">
+                                    +92 317 2319116
+                                </a>
+                            </div>
+
+                        </div>
+
+                        <div class="contact-info-item">
+
+                            <div class="contact-info-icon">◉</div>
+
+                            <div>
+                                <small>WHATSAPP</small>
+                                <a href="https://wa.me/923172319116"
+                                   target="_blank"
+                                   rel="noopener noreferrer">
+                                    Start WhatsApp Chat
+                                </a>
+                            </div>
+
+                        </div>
+
+                        <div class="contact-info-item">
+
+                            <div class="contact-info-icon">⌘</div>
+
+                            <div>
+                                <small>DEVELOPMENT FIELD</small>
+                                <strong>Web Development</strong>
+                            </div>
+
+                        </div>
+
+                        <div class="contact-socials">
+                            <a href="mailto:suhailchanna294@gmail.com">Email Me ↗</a>
+                            <a href="https://wa.me/923172319116"
+                               target="_blank"
+                               rel="noopener noreferrer">WhatsApp ↗</a>
+                        </div>
+
+                    </aside>
+
+                    <!-- RIGHT FORM -->
+
+                    <section class="contact-form-panel reveal"
+                             id="contact-form">
+
+                        <div class="contact-form-heading">
+
+                            <span>02 / SEND A MESSAGE</span>
+
+                            <h2>Tell Me About Your Idea.</h2>
+
+                            <p>
+                                Complete the details below. After submission,
+                                a confirmation page will show your message.
+                            </p>
+
+                        </div>
+
+                        <form id="contactForm">
+
+                            <div class="contact-fields">
+
+                                <div class="contact-field">
+                                    <label for="name">Your Name *</label>
+                                    <input type="text"
+                                           id="name"
+                                           name="name"
+                                           placeholder="Enter your full name"
+                                           autocomplete="name"
+                                           required>
+                                </div>
+
+                                <div class="contact-field">
+                                    <label for="email">Email Address *</label>
+                                    <input type="email"
+                                           id="email"
+                                           name="email"
+                                           placeholder="Enter your email"
+                                           autocomplete="email"
+                                           required>
+                                </div>
+
+                                <div class="contact-field">
+                                    <label for="phone">Phone / WhatsApp</label>
+                                    <input type="tel"
+                                           id="phone"
+                                           name="phone"
+                                           placeholder="Enter your phone number"
+                                           autocomplete="tel">
+                                </div>
+
+                                <div class="contact-field">
+                                    <label for="service">What Do You Need?</label>
+                                    <select id="service" name="service">
+                                        <option value="">Select a service</option>
+                                        <option value="Website Development">Website Development</option>
+                                        <option value="Frontend Development">Frontend Development</option>
+                                        <option value="Backend Development">Backend Development</option>
+                                        <option value="Portfolio Website">Portfolio Website</option>
+                                        <option value="Website Design">Website Design</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+
+                                <div class="contact-field full">
+                                    <label for="subject">Subject *</label>
+                                    <input type="text"
+                                           id="subject"
+                                           name="subject"
+                                           placeholder="Enter message subject"
+                                           required>
+                                </div>
+
+                                <div class="contact-field full">
+                                    <label for="message">Your Message *</label>
+                                    <textarea id="message"
+                                              name="message"
+                                              placeholder="Describe your project or idea..."
+                                              required></textarea>
+                                </div>
+
+                                <button type="submit" class="contact-submit">
+                                    Submit Message &nbsp; ↗
+                                </button>
+
+                            </div>
+
+                            <p class="contact-form-note">
+                                Your information will be displayed on the
+                                confirmation page after submission.
+                            </p>
+
+                        </form>
+
+                    </section>
+
+                </div>
+
+                <!-- BOTTOM MESSAGE -->
+
+                <div class="contact-bottom reveal">
+
+                    <span class="section-kicker">
+                        03 / THE NEXT STEP
+                    </span>
+
+                    <h2>
+                        One Idea Can Start
+                        <span class="gradient-text">Something Great.</span>
+                    </h2>
+
+                    <p>
+                        Let's turn your thoughts into a meaningful digital
+                        experience through creativity, technology and code.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- COMPLETE FOOTER -->
+
+    <footer class="footer">
+
+        <div class="container footer-main">
+
+            <div class="footer-about">
+
+                <a href="index.html" class="brand footer-brand">
+                    <span class="brand-icon">S</span>
+                    <span>SOHAIL<span class="brand-accent">CHANNA.</span></span>
+                </a>
+
+                <p>
+                    A digital portfolio dedicated to development,
+                    technology, creativity and the process of turning
+                    ideas into meaningful web experiences.
+                </p>
+
+                <div class="footer-socials">
+
+                    <a href="mailto:suhailchanna294@gmail.com"
+                       aria-label="Email">✉</a>
+
+                    <a href="https://wa.me/923172319116"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="WhatsApp">◉</a>
+
+                    <a href="https://github.com/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="GitHub">⌘</a>
+
+                    <a href="https://linkedin.com/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="LinkedIn">in</a>
+
+                </div>
+
+            </div>
+
+            <div class="footer-column">
+                <h3>Navigation</h3>
+                <a href="index.html">Home</a>
+                <a href="about.html">About Me</a>
+                <a href="skills.html">Technical Skills</a>
+                <a href="services.html">Services</a>
+                <a href="projects.html">Projects</a>
+            </div>
+
+            <div class="footer-column">
+                <h3>More Pages</h3>
+                <a href="journey.html">My Journey</a>
+                <a href="projects.html">Portfolio Work</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div class="footer-column footer-contact">
+
+                <h3>Contact Me</h3>
+
+                <span class="footer-label">EMAIL</span>
+
+                <a href="mailto:suhailchanna294@gmail.com">
+                    suhailchanna294@gmail.com
+                </a>
+
+                <span class="footer-label">PHONE / WHATSAPP</span>
+
+                <a href="tel:+923172319116">
+                    +92 317 2319116
+                </a>
+
+                <span class="footer-label">LOCATION</span>
+
+                <p>Pakistan</p>
+
+            </div>
+
+        </div>
+
+        <div class="container footer-bottom">
+
+            <p>
+                © <span id="currentYear"></span>
+                Sohail Channa. All rights reserved.
+            </p>
+
+            <p>
+                DESIGNED & DEVELOPED WITH <span>♥</span>
+            </p>
+
+        </div>
+
+    </footer>
+
+    <!-- FLOATING WHATSAPP -->
+
+    <a class="whatsapp-button"
+       href="https://wa.me/923172319116"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Chat on WhatsApp">
+
+        <span>◉</span>
+        <small>Let's Chat</small>
+
+    </a>
+
+    <!-- EXISTING JAVASCRIPT -->
+
+    <script src="script.js"></script>
+    <script src="contact.js"></script>
+
+    <!-- CONTACT FORM FUNCTIONALITY -->
+
+    <!-- <script>
+
+const contactForm = document.getElementById("contactForm");
+
+if (contactForm) {
+    contactForm.addEventListener("submit", async function(event) {
+        event.preventDefault();
+
+        const submitButton = contactForm.querySelector(
+            'button[type="submit"]'
+        );
+
+        const originalText = submitButton.textContent;
+
+        const contactData = {
+            name: document.getElementById("name").value.trim(),
+            email: document.getElementById("email").value.trim(),
+            phone: document.getElementById("phone").value.trim(),
+            service: document.getElementById("service").value,
+            subject: document.getElementById("subject").value.trim(),
+            message: document.getElementById("message").value.trim()
+        };
+
+        submitButton.disabled = true;
+        submitButton.textContent = "Sending Message...";
+
+        try {
+            const response = await fetch("/api/contact", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(contactData)
+            });
+
+            const result = await response.json();
+
+            if (!response.ok || !result.success) {
+                throw new Error(result.message || "Message sending failed.");
+            }
+
+            showThankYouPage(contactData);
+
+        } catch (error) {
+            alert(error.message);
+            submitButton.disabled = false;
+            submitButton.textContent = originalText;
+        }
+    });
+}
+
+function showThankYouPage(data) {
+    sessionStorage.setItem(
+        "portfolioContactMessage",
+        JSON.stringify(data)
+    );
+
+    document.querySelector("main").innerHTML = `
+        <section class="thankyou-section">
+            <div class="thankyou-card">
+
+                <div class="success-icon">✓</div>
+
+                <span class="section-kicker">MESSAGE SUBMITTED</span>
+
+                <h1>
+                    Thank <span class="gradient-text">You!</span>
+                </h1>
+
+                <p>
+                    Your message has been successfully submitted.
+                    Thank you for contacting me. I will get back
+                    to you as soon as possible.
+                </p>
+
+                <div class="message-details">
+                    <h3>Your Submitted Information</h3>
+
+                    <div class="detail-row">
+                        <span class="detail-label">Name</span>
+                        <span class="detail-value">${escapeHTML(data.name)}</span>
+                    </div>
+
+                    <div class="detail-row">
+                        <span class="detail-label">Email</span>
+                        <span class="detail-value">${escapeHTML(data.email)}</span>
+                    </div>
+
+                    <div class="detail-row">
+                        <span class="detail-label">Phone</span>
+                        <span class="detail-value">${escapeHTML(data.phone || "Not provided")}</span>
+                    </div>
+
+                    <div class="detail-row">
+                        <span class="detail-label">Service</span>
+                        <span class="detail-value">${escapeHTML(data.service || "Not selected")}</span>
+                    </div>
+
+                    <div class="detail-row">
+                        <span class="detail-label">Subject</span>
+                        <span class="detail-value">${escapeHTML(data.subject)}</span>
+                    </div>
+
+                    <div class="detail-row">
+                        <span class="detail-label">Message</span>
+                        <span class="detail-value message-text">${escapeHTML(data.message)}</span>
+                    </div>
+                </div>
+
+                <div class="thankyou-actions">
+                    <a href="index.html" class="nav-button">Back to Home</a>
+                    <a href="contact.html" class="secondary-button">Send Another Message</a>
+                </div>
+
+            </div>
+        </section>
+    `;
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+
+function escapeHTML(value) {
+    return String(value).replace(/[&<>"']/g, function(character) {
+        const entities = {
+            "&": "&amp;",
+            "<": "&lt;",
+            ">": "&gt;",
+            '"': "&quot;",
+            "'": "&#039;"
+        };
+
+        return entities[character];
+    });
+}
+
+
+    </script> -->
+
+</body>
+</html>
